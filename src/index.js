@@ -1,9 +1,10 @@
 import './index.scss';
 import { h, app } from 'hyperapp';
+import { Greeter } from "./components.js";
 
 const state = {
   count: 0,
-  name: 'Franky'
+  name: 'Engin'
 };
 
 const actions = {
@@ -13,6 +14,7 @@ const actions = {
 
 const view = (state, actions) => (
   <main>
+    <Greeter name={state.name} />
     <h1>{state.count}</h1>
     <div>
       <button onclick={ () => {actions.down(100)} }>-</button>
